@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - Book Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .resources-hero {
+            padding: 120px 0 60px;
+            text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+                        url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1920');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .resources-hero h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: #ffdd57;
+        }
+
+        .resources-hero p {
+            font-family: 'Raleway', sans-serif;
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .resource-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .resource-card h3 {
+            font-family: 'Playfair Display', serif;
+            color: #ffdd57;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .resource-card p {
+            color: #f0f0f0;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .resource-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .resource-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .resource-links a {
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+
+        .resource-links a:hover {
+            color: #ffdd57;
+        }
+
+        .resource-links a::before {
+            content: "→";
+            margin-right: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .resource-links a:hover::before {
+            transform: translateX(5px);
+        }
+    </style>
+</head>
+<body>
+    <div class="landing-page">
+        <header>
+            <nav>
+                <h1>Book Portal</h1>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="queries.html">ASK AIVO</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="resources-hero">
+            <h2>Learning Resources</h2>
+            <p>Access a curated collection of study materials, references, and tools designed specifically for KTU students.</p>
+        </section>
+
+        <main class="resources-grid">
+            <div class="resource-card">
+                <h3>Core Subjects</h3>
+                <p>Essential study materials for fundamental engineering courses.</p>
+                <ul class="resource-links">
+                    <li><a href="#">Engineering Mathematics</a></li>
+                    <li><a href="#">Engineering Physics</a></li>
+                    <li><a href="#">Engineering Mechanics</a></li>
+                    <li><a href="#">Engineering Graphics</a></li>
+                </ul>
+            </div>
+
+            <div class="resource-card">
+                <h3>Branch Specific</h3>
+                <p>Specialized resources for your engineering branch.</p>
+                <ul class="resource-links">
+                    <li><a href="#">Computer Science</a></li>
+                    <li><a href="#">Mechanical Engineering</a></li>
+                    <li><a href="#">Electrical Engineering</a></li>
+                    <li><a href="#">Civil Engineering</a></li>
+                </ul>
+            </div>
+
+            <div class="resource-card">
+                <h3>Previous Questions</h3>
+                <p>Practice with past exam papers and solutions.</p>
+                <ul class="resource-links">
+                    <li><a href="#">Semester Wise Papers</a></li>
+                    <li><a href="#">Model Question Papers</a></li>
+                    <li><a href="#">Solved Examples</a></li>
+                    <li><a href="#">Question Banks</a></li>
+                </ul>
+            </div>
+
+            <div class="resource-card">
+                <h3>Additional Resources</h3>
+                <p>Supplementary learning materials and tools.</p>
+                <ul class="resource-links">
+                    <li><a href="#">Video Lectures</a></li>
+                    <li><a href="#">Online Courses</a></li>
+                    <li><a href="#">Research Papers</a></li>
+                    <li><a href="#">Study Guides</a></li>
+                </ul>
+            </div>
+        </main>
+
+       
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

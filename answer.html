@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Answer - Book Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .answer-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        .query-text {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #ddd;
+        }
+        .answer-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #333;
+        }
+        .loading {
+            text-align: center;
+            padding: 2rem;
+        }
+        .loading::after {
+            content: "...";
+            animation: dots 1.5s steps(5, end) infinite;
+        }
+        @keyframes dots {
+            0%, 20% { content: "." }
+            40% { content: ".." }
+            60%, 100% { content: "..." }
+        }
+        .back-button {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            margin-top: 1.5rem;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: background 0.3s ease;
+        }
+        .back-button:hover {
+            background: #555;
+        }
+        .error-message {
+            color: #d32f2f;
+            padding: 1rem;
+            background: #ffebee;
+            border-radius: 4px;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="landing-page">
+        <header>
+            <nav>
+                <h1>Book Portal</h1>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="references.html">References</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="answer-container">
+                <div class="query-text">
+                    Your Query: <span id="userQuery"></span>
+                </div>
+                <div id="loadingText" class="loading">Getting answer from AI</div>
+                <div class="answer-text" id="answerText" style="display: none;"></div>
+                <div id="errorMessage" class="error-message" style="display: none;"></div>
+                <a href="index.html" class="back-button">Ask Another Question</a>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Book Portal. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Get query parameter from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const query = urlParams.get('query');
+        
+        // Display the query
+        document.getElementById('userQuery').textContent = query;
+        
+        // Function to get answer from AI model
+        async function getAIAnswer(query) {
+            try {
+                const response = await fetch('http://localhost:5000/api/query', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ query: query })
+                });
+
+                if (!response.ok) {
+                    throw new Error('Failed to get response from Llama 2 model');
+                }
+
+                const data = await response.json();
+                if (data.error) {
+                    throw new Error(data.error);
+                }
+                return data.answer;
+            } catch (error) {
+                throw new Error('Error getting answer from Llama 2: ' + error.message);
+            }
+        }
+
+        // Function to display the answer or error
+        async function displayAnswer() {
+            const loadingText = document.getElementById('loadingText');
+            const answerText = document.getElementById('answerText');
+            const errorMessage = document.getElementById('errorMessage');
+
+            try {
+                // Get answer from AI
+                const answer = await getAIAnswer(query);
+                
+                // Hide loading, show answer
+                loadingText.style.display = 'none';
+                answerText.style.display = 'block';
+                answerText.innerHTML = answer;
+            } catch (error) {
+                // Hide loading, show error
+                loadingText.style.display = 'none';
+                errorMessage.style.display = 'block';
+                errorMessage.textContent = error.message;
+            }
+        }
+
+        // Start getting the answer when page loads
+        displayAnswer();
+    </script>
+</body>
+</html>

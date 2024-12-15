@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - AIVO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        main {
+            margin-top: 100px; /* Add space for fixed header */
+        }
+
+        .about-content {
+            max-width: 1000px;
+            margin: 4rem auto;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            color: #fff;
+        }
+
+        .about-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .about-header h2 {
+            font-size: 2.5rem;
+            color: #ffdd57;
+            margin-bottom: 1rem;
+        }
+
+        .mission-statement {
+            font-style: italic;
+            color: #f0f0f0;
+            margin: 1rem 0;
+            padding: 1.5rem;
+            border-left: 4px solid #ffdd57;
+            font-size: 1.2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 0 10px 10px 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            color: #ffdd57;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .feature-card p {
+            color: #f0f0f0;
+            line-height: 1.6;
+        }
+
+        .team-section {
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        .team-section h3 {
+            color: #ffdd57;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .team-member {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .team-member img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            border: 3px solid #ffdd57;
+            object-fit: cover;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+
+        .team-member h4 {
+            color: #ffdd57;
+            font-size: 1.3rem;
+            margin: 0.5rem 0;
+        }
+
+        .team-member .contact-info {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+        }
+
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-item span {
+            margin-top: 0.5rem;
+            color: #f0f0f0;
+        }
+
+        .contact-section {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+
+        .contact-section h3 {
+            color: #ffdd57;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 1.5rem;
+        }
+
+        @media screen and (max-width: 768px) {
+            .about-content {
+                margin: 2rem 1rem;
+                padding: 1.5rem;
+            }
+
+            .features-grid, .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .team-member img {
+                width: 200px;
+                height: 200px;
+            }
+
+            .about-header h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .about-content {
+                margin: 1rem;
+                padding: 1rem;
+            }
+
+            .mission-statement {
+                padding: 1rem;
+                font-size: 1rem;
+            }
+
+            .feature-card {
+                padding: 1rem;
+            }
+
+            .team-member {
+                padding: 1.5rem;
+            }
+
+            .team-member img {
+                width: 180px;
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="landing-page">
+        <header>
+            <nav>
+                <div class="logo">
+                    <h1>AIVO</h1>
+                    <span class="logo-subtitle">Advanced Intelligent Virtual Orator</span>
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="queries.html">Ask AIVO</a></li>
+                    <li><a href="semesters.html">Resources</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="about-content">
+                <div class="about-header">
+                    <h2>About AIVO</h2>
+                    <div class="mission-statement">
+                        Empowering KTU students with AI-powered learning assistance and comprehensive study resources, making education more accessible and engaging.
+                    </div>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3>Our Mission</h3>
+                        <p> AIVO is designed to simplify your academic journey by providing personalized assistance, comprehensive study materials, and an interactive learning experience. Whether you're preparing for exams, exploring new topics, or seeking resources, AIVO ensures you have everything you need to succeed.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>AI-Powered Learning</h3>
+                        <p>Experience the transformative power of artificial intelligence in education. Our advanced AI system comprehends your queries and delivers precise, relevant answers tailored to your learning needs, ensuring a seamless and effective study experience.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Comprehensive Resources</h3>
+                        <p>Access a vast library of study materials including:
+                        <br>• Detailed subject notes
+                        <br>• Previous Year Question Papers
+                       
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Student-Centric</h3>
+                        <p>Created by students, for students. AIVO is thoughtfully designed to understand your needs and tackle your challenges, providing solutions that truly make a difference in your academic journey.</p>
+                    </div>
+                </div>
+
+                <div class="team-section">
+                    <h3>Meet Our Team</h3>
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <img src="images/team_member2.jpg" alt="Nandana Vinod">
+                            <h4>Nandana Vinod</h4>
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <span>📧</span>
+                                    <span>NandanaSVinod@gmail.com</span>
+                                </div>
+                                <div class="contact-item">
+                                    <span>📱</span>
+                                    <span>+91 8547647211</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="team-member">
+                            <img src="https://via.placeholder.com/150" alt="Mohammed Hisham">
+                            <h4>Mohammed Hisham</h4>
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <span>📧</span>
+                                    <span>hishammohammed1404@gmail.com</span>
+                                </div>
+                                <div class="contact-item">
+                                    <span>📱</span>
+                                    <span>+91 9495881245</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="team-member">
+                            <img src="images/team_member3.jpg" alt="Diana Liz Kuriakose">
+                            <h4>Diana Liz Kuriakose</h4>
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <span>📧</span>
+                                    <span>dianalizkuriakose@gmail.com</span>
+                                </div>
+                                <div class="contact-item">
+                                    <span>📱</span>
+                                    <span>+91 9446710040</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="team-member">
+                            <img src="images/team_member4.jpg" alt="Maria Joshy">
+                            <h4>Maria Joshy</h4>
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <span>📧</span>
+                                    <span>mariajoshy373@gmail.com</span>
+                                </div>
+                                <div class="contact-item">
+                                    <span>📱</span>
+                                    <span>+91 8281994386</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-section">
+                    <h3>Connect With Us</h3>
+                    <p>Have questions or suggestions?</p>
+                    <p>Feel free to reach out!</p>
+                    <p>Email any team member or contact us on WhatsApp for assistance.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
