@@ -25,7 +25,7 @@
         }
         .container {
             max-width: 800px;
-            margin: auto;
+            margin:110px auto 0 auto;
             background: rgba(255, 255, 255, 0.8);
             padding: 20px;
             border-radius: 8px;
@@ -57,8 +57,35 @@
         a:hover {
             text-decoration: underline;
         }
+        .back-button {
+            position: absolute;
+            top: 50px;
+            left: 30px;
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            font-family: 'Raleway', sans-serif;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-button:hover {
+            color: #ffdd57;
+        }
+
+        .back-button::before {
+            content: "←";
+            margin-right: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .back-button:hover::before {
+            transform: translateX(-5px);
+        }
     </style>
 </head>
+<a href="semester5.html" class="back-button">Back to Semester 5</a>
 <body>
     <div class="container">
         <h2 style="color: black;">Course Materials</h2>
