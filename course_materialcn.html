@@ -17,12 +17,32 @@
             background-attachment: fixed;
             color: white;
             margin: 0;
-            padding: 20px;
+            padding: 0;
         }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            text-decoration: none;
+            color: white;
+            background-color: #007BFF;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+
         h2 {
             color: #ffdd57;
             text-align: center;
+            margin-top: 60px;
         }
+
         .container {
             max-width: 800px;
             margin: auto;
@@ -31,6 +51,7 @@
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
+
         .module-card {
             background: #e9ecef;
             border-radius: 8px;
@@ -38,64 +59,38 @@
             margin: 10px 0;
             transition: transform 0.2s;
         }
+
         .module-card:hover {
             transform: scale(1.02);
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         }
+
         ul {
             list-style-type: none;
             padding: 0;
         }
+
         li {
             margin: 10px 0;
         }
+
         a {
             text-decoration: none;
             color: #007BFF;
             font-weight: bold;
         }
+
         a:hover {
             text-decoration: underline;
         }
-        .back-button {
-            position: absolute;
-            top: 100px;
-            left: 30px;
-            color: #fff;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            font-family: 'Raleway', sans-serif;
-            font-size: 1.1rem;
-            transition: color 0.3s ease;
-        }
-
-        .back-button:hover {
-            color: #ffdd57;
-        }
-
-        .back-button::before {
-            content: "←";
-            margin-right: 0.5rem;
-            transition: transform 0.3s ease;
-        }
-
-        .back-button:hover::before {
-            transform: translateX(-5px);
-        }
     </style>
 </head>
-<a href="semesters.html" class="back-button">Back to Semesters</a>
 <body>
+    <a href="semesters.html" class="back-button">Back to Semesters</a>
     <div class="container">
         <h2 style="color: black;">Course Materials</h2>
         <ul>
             <li class="module-card"><a href="https://drive.google.com/file/d/1K5ZmHn3phvhdZrg1acvb3_mAyCfk6t8k/view?usp=drive_link">Module 1: Chapter 1</a></li>
             <li class="module-card"><a href="https://drive.google.com/file/d/1K_EFYNsA8KB4z19QXMLa3VBtMY_hThqw/view?usp=drive_link">Module 2: Chapter 2</a></li>
             <li class="module-card"><a href="https://drive.google.com/file/d/1OKUADiMMaEJl1N3-qTvh5OSp9aPqeCvW/view?usp=drive_link">Module 3: Chapter 3</a></li>
-            <li class="module-card"><a href="https://drive.google.com/file/d/1afe_FF4lXnNEZpoWRmcwAxpwN4J5hXAy/view?usp=drive_link">Module 4: Chapter 4</a></li>
-            <li class="module-card"><a href="https://drive.google.com/file/d/1nPdJTGAGIwtpjrlaW-AwuBWGs_059bAo/view?usp=drive_link">Module 5: Chapter 5</a></li>
-        </ul>
-    </div>
-</body>
-</html>
+            <li class="module-card"><a href="https://drive.google.com/file/d/1afe_FF4lXnNEZpoWRmcwAxpwN4
