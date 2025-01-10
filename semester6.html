@@ -3,102 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Semester 6 Resources - AIVO</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Semester 5 - Branch Selection</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
-        .resources-hero {
-            padding: 120px 0 60px;
+        body {
+            font-family: 'Raleway', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: white;
+        }
+
+        .branch-selection {
             text-align: center;
+            padding: 120px 0 60px;
             background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
                         url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1920');
             background-size: cover;
             background-position: center;
-            color: white;
         }
 
-        .resources-hero h2 {
+        .branch-selection h1 {
             font-family: 'Playfair Display', serif;
             font-size: 3.5rem;
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
             color: #ffdd57;
         }
 
-        .resources-hero p {
-            font-family: 'Raleway', sans-serif;
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto;
-            opacity: 0.9;
-        }
-
-        .resources-grid {
+        .branch-buttons {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
-            padding: 4rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
+            padding: 2rem;
         }
 
-        .resource-card {
+        .branch-button {
+            padding: 2rem;
+            font-size: 1.5rem;
+            color: #ffdd57;  /* Changed to yellow */
+            text-decoration: none;
+            border-radius: 15px;
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 15px;
-            padding: 2rem;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-weight: bold;  /* Added bold */
+            font-family: 'Playfair Display', serif;  /* Added to match main heading font */
         }
 
-        .resource-card:hover {
+        .branch-button:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .resource-card h3 {
-            font-family: 'Playfair Display', serif;
-            color: #ffdd57;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .resource-card p {
-            color: #f0f0f0;
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-
-        .resource-links {
-            list-style: none;
-            padding: 0;
-        }
-
-        .resource-links li {
-            margin-bottom: 0.5rem;
-        }
-
-        .resource-links a {
-            color: #fff;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            transition: color 0.3s ease;
-        }
-
-        .resource-links a:hover {
-            color: #ffdd57;
-        }
-
-        .resource-links a::before {
-            content: "→";
-            margin-right: 0.5rem;
-            transition: transform 0.3s ease;
-        }
-
-        .resource-links a:hover::before {
-            transform: translateX(5px);
+            color: #ffffff;  /* Changed hover color to white for better contrast */
         }
 
         .back-button {
@@ -148,87 +107,14 @@
 
         <a href="semesters.html" class="back-button">Back to Semesters</a>
 
-        <div class="home-navigation">
+        <div class="branch-selection">
+            <h1>Select Your Branch</h1>
+            <div class="branch-buttons">
+                <a href="sem6cs.html" class="branch-button">COMPUTER SCIENCE</a>
+                <a href="semester5_ece.html" class="branch-button">ELECTRONICS & COMMUNICATION</a>
+                <a href="semester5_ee.html" class="branch-button">ELECTRICAL ENGINEERING</a>
+            </div>
         </div>
-
-        <section class="resources-hero">
-            <h2>Semester 6 Resources</h2>
-            <p>Access comprehensive study materials and resources for your sixth semester subjects.</p>
-        </section>
-
-        <main class="resources-grid">
-            <div class="resource-card">
-                <h3>Compiler Design</h3>
-                <p>Study materials for language processing and compiler construction.</p>
-                <ul class="resource-links">
-                    <li><a href="course_materialcd.html">Course Materials</a></li>         
-                    <li><a href="https://drive.google.com/file/d/1SwTC9duaaw4s3eAIyEA0iiCGoN3BFK3o/view">Syllabus</a></li>
-                    <li><a href="#">Reference Text</a></li>
-                </ul>
-            </div>
-
-            <div class="resource-card">
-                <h3>Computer Graphics And Image Processing</h3>
-                <p>Resources for mastering computer graphics techniques and image processing algorithms.</p>
-                <ul class="resource-links">
-                    <li><a href="course_materialcg.html">Course Materials</a></li>         
-                    <li><a href="https://drive.google.com/file/d/18aRNr9OwyIC8xBzdtLMy-VU1uCdWYhuB/view">Syllabus</a></li>
-                    <li><a href="#">Reference Text</a></li>
-                </ul>
-            </div>
-
-            <div class="resource-card">
-                <h3>Algorithm Analysis And Design</h3>
-                <p>Resources for understanding algorithm design principles and performance analysis techniques.</p>
-                <ul class="resource-links">
-                    <li><a href="course_materialaad.html">Course Materials</a></li>        
-                    <li><a href="https://drive.google.com/file/d/1osoioGNBIMlr6qf5we54As_TinjWZnRd/view">Syllabus</a></li>
-                    <li><a href="#">Reference Text</a></li>
-                </ul>
-            </div>
-
-            <div class="resource-card">
-                <h3>Industrial Economics And Foreign Trade</h3>
-                <p>Materials for data analysis and knowledge discovery.</p>
-                <ul class="resource-links">
-                    <li><a href="course_materialieft.html">Course Materials</a></li>        
-                    <li><a href="https://drive.google.com/file/d/1SisvJAknS6Ancyfag3Te7C5tjYIAWeiI/view">Syllabus</a></li>
-                    <li><a href="#">Reference Text</a></li>
-                </ul>
-            </div>
-
-        <div class="resource-card">
-                <h3>Foundations of Machine Learning</h3>
-                <p>Materials for data analysis and knowledge discovery.</p>
-                <ul class="resource-links">
-                    <li><a href="course_materialml.html">Course Materials</a></li>        
-                    <li><a href="https://drive.google.com/file/d/1SisvJAknS6Ancyfag3Te7C5tjYIAWeiI/view">Syllabus</a></li>
-                    <li><a href="#">Reference Text</a></li>
-                </ul>
-            </div>
-    
-            <div class="resource-card">
-                <h3>Foundations of Security in Computing</h3>
-                <p>Materials for data analysis and knowledge discovery.</p>
-                <ul class="resource-links">
-                    <li><a href="course_materialieft.html">Course Materials</a></li>        
-                    <li><a href="https://drive.google.com/file/d/1SisvJAknS6Ancyfag3Te7C5tjYIAWeiI/view">Syllabus</a></li>
-                    <li><a href="#">Reference Text</a></li>
-                </ul>
-            </div>
-            <div class="resource-card">
-                <h3>Programming in Python</h3>
-                <p>Materials for data analysis and knowledge discovery.</p>
-                <ul class="resource-links">
-                    <li><a href="course_materialpy.html">Course Materials</a></li>        
-                    <li><a href="https://drive.google.com/file/d/11820jHlkAekWcQ5ZDydRzh9cenP9VxG7/view">Syllabus</a></li>
-                    <li><a href="#">Reference Text</a></li>
-                </ul>
-            </div>
-        </main>
-     </div>
-
-
-    <script src="script.js"></script>
+    </div>
 </body>
 </html>
