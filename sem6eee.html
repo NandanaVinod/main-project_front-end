@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semester 5 Resources - AIVO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .resources-hero {
+            padding: 120px 0 60px;
+            text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+                        url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1920');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .resources-hero h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: #ffdd57;
+        }
+
+        .resources-hero p {
+            font-family: 'Raleway', sans-serif;
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .resource-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .resource-card h3 {
+            font-family: 'Playfair Display', serif;
+            color: #ffdd57;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .resource-card p {
+            color: #f0f0f0;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .resource-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .resource-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .resource-links a {
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+
+        .resource-links a:hover {
+            color: #ffdd57;
+        }
+
+        .resource-links a::before {
+            content: "→";
+            margin-right: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .resource-links a:hover::before {
+            transform: translateX(5px);
+        }
+
+        .back-button {
+            position: absolute;
+            top: 100px;
+            left: 30px;
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            font-family: 'Raleway', sans-serif;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-button:hover {
+            color: #ffdd57;
+        }
+
+        .back-button::before {
+            content: "←";
+            margin-right: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .back-button:hover::before {
+            transform: translateX(-5px);
+        }
+    </style>
+</head>
+<body>
+    <div class="landing-page">
+        <header>
+            <nav>
+                <div class="logo">
+                    <h1>AIVO</h1>
+                    <span class="logo-subtitle">Advanced Intelligent Virtual Orator</span>
+                </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="queries.html">Ask AIVO</a></li>
+                    <li><a href="semesters.html">Resources</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <a href="semesters.html" class="back-button">Back to Semesters</a>
+
+        <div class="home-navigation">
+        </div>
+
+        <section class="resources-hero">
+            <h2>Semester 5 Resources</h2>
+            <p>Access comprehensive study materials and resources for your fifth semester subjects.</p>
+        </section>
+
+        <main class="resources-grid">
+            
+
+            <div class="resource-card">
+                <h3>Analog And Digital Communication</h3>
+                <p>Study of analog and digital signal transmission</p></p>
+                <ul class="resource-links">
+                    <li><a href="course_materialaadc.html">Course Materials</a></li>
+                    <li><a href="https://drive.google.com/file/d/1F8_PZA1xG8U66fei4f5XVxJUBsRa1n5Q/view">Syllabus</a></li>
+                    <li><a href="">Reference Text</a></li>
+                </ul>
+            </div>
+            <div class="resource-card">
+                <h3>Control Systems</h3>
+                <p>Resources for effective disaster response and management.</p>
+                <ul class="resource-links">
+                    <li><a href="course_materialcs.html">Course Materials</a></li>
+                    <li><a href="https://drive.google.com/file/d/1K2xwpIH1aBEMrXww6dy0oLjHYcVhtaOC/view">Syllabus</a></li>
+                    <li><a href="#">Reference Text</a></li>
+                </ul>
+            </div>
+
+            <div class="resource-card">
+                <h3>Digital Signal Processing</h3>
+                <p></p>
+                <ul class="resource-links">
+                    <li><a href="course_materialdsp.html">Course Materials</a></li>         
+                    <li><a href="https://drive.google.com/file/d/1yAYKscEx8X2GPIvscfhPEwoCFKwc5bM6/view">Syllabus</a></li>
+                    <li><a href="#">Reference Text</a></li>
+                </ul>
+            </div>
+           
+            <div class="resource-card">
+                <h3>Linear Integrated Circuits</h3>
+                <p></p>
+                <ul class="resource-links">
+                    <li><a href="course_materiallic.html">Course Materials</a></li>         
+                    <li><a href="https://drive.google.com/file/d/1_rY70UnnjdCq0RUnxdjukdxZCchjAFPV/view">Syllabus</a></li>
+                    <li><a href="#">Reference Text</a></li>
+                </ul>
+            </div>
+            <div class="resource-card">
+                <h3>Management For Engineers</h3>
+                <p></p>
+                <ul class="resource-links">
+                    <li><a href="course_materialmfe.html">Course Materials</a></li>         
+                    <li><a href="https://drive.google.com/file/d/18mEjVkUVkVDxi5e1-p-QV2OQ3g4KvYJs/view">Syllabus</a></li>
+                    <li><a href="#">Reference Text</a></li>
+                </ul>
+            </div>
+            <div class="resource-card">
+                <h3>Disaster Management</h3>
+                <p>Resources for effective disaster response and management.</p>
+                <ul class="resource-links">
+                    <li><a href="course_materialdm.html">Course Materials</a></li>
+                    <li><a href="https://drive.google.com/file/d/1pWV9pttZ1DmmpTjY8k1T6NQzcc2R5JR6/view">Syllabus</a></li>
+                    <li><a href="#">Reference Text</a></li>
+                </ul>
+            </div>
+            
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script>function toggleSection(sectionId) {
+        var section = document.getElementById(sectionId);
+        section.style.display = (section.style.display === 'none' || section.style.display === '') ? 'block' : 'none';
+    }</script>
+</body>
+</html>
