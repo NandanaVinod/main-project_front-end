@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Materials</title>
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                        url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1920');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+        h2 {
+            color: #ffdd57;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin:110px auto 0 auto;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .module-card {
+            background: #e9ecef;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+            transition: transform 0.2s;
+        }
+        .module-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        a {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .back-button {
+            position: absolute;
+            top: 50px;
+            left: 30px;
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            font-family: 'Raleway', sans-serif;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-button:hover {
+            color: #ffdd57;
+        }
+
+        .back-button::before {
+            content: "←";
+            margin-right: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .back-button:hover::before {
+            transform: translateX(-5px);
+        }
+    </style>
+</head>
+<a href="semester5.html" class="back-button">Back to Semester 5</a>
+<body>
+    <div class="container">
+        <h2 style="color: black;">Course Materials</h2>
+        <ul>
+            <li class="module-card"><a href="https://drive.google.com/file/d/1Rfkehb4SFJsdxt201HvnY6PmVanWoVBc/view">April 2018</a></li>
+            <li class="module-card"><a href="https://drive.google.com/file/d/12NyhgPx-waif4MMptvygOuLqqP32BOQT/view">December 2019</a></li>
+            <li class="module-card"><a href="https://drive.google.com/file/d/1RbDF346Acu6vUL0hAXeVvDp5hm7PTJhw/view">May 2019</a></li>
+        </ul>
+    </div>
+</body>
+</html>
