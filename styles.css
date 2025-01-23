@@ -75,7 +75,7 @@ nav ul {
     display: flex;
     list-style: none;
     padding: 1rem 2rem;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0);
 }
 
 nav ul li {
